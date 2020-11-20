@@ -7,6 +7,7 @@ import authSelectors from "../../redux/auth/authSelectors";
 import authOperations from "../../redux/auth/authOperations";
 
 import UserMenu from "../UserMenu/UserMenu";
+import HomePage from "../../pages/HomePage/HomePage";
 
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import PublicRoute from "../PublicRoute/PublicRoute";
@@ -29,24 +30,30 @@ class App extends Component {
       <div className="App">
         <div className={styles.container}>
           {!this.props.isAuthenticated && (
-            <Link to="/" exact className="linkHome">
-              <FontAwesomeIcon icon={faHome} size="3x" color="#304a63" />
-            </Link>
+            <div className={styles.headContainer}>
+              <div className={styles.homeIcon}>
+              <Link to="/" exact className="linkHome">
+                <FontAwesomeIcon icon={faHome} size="3x" color="#304a63" />
+              </Link>
+              </div>
+              <HomePage />
+            </div>
           )}
 
           {this.props.isAuthenticated && <UserMenu />}
-
-          <Suspense fallback={`Loading.........`}>
-            <Switch>
-              {routes.map((route) =>
-                route.private ? (
-                  <PrivateRoute key={route.label} {...route} />
-                ) : (
-                  <PublicRoute key={route.label} {...route} />
-                )
-              )}
-            </Switch>
-          </Suspense>
+          <div>
+            <Suspense fallback={`Loading.........`}>
+              <Switch>
+                {routes.map((route) =>
+                  route.private ? (
+                    <PrivateRoute key={route.label} {...route} />
+                  ) : (
+                    <PublicRoute key={route.label} {...route} />
+                  )
+                )}
+              </Switch>
+            </Suspense>
+          </div>
         </div>
       </div>
     );

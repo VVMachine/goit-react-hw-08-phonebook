@@ -1,7 +1,21 @@
 .container {
     margin-left: 20px;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.headContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.homeIcon {
+    padding-top: 22px;
+    margin-right: 10px;
 }
 
 .link {
     color: rgb(100, 100, 185);
 }
+

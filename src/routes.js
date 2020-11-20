@@ -5,7 +5,7 @@ export default [
     path: "/",
     label: "Home",
     exact: true,
-    component: lazy(() => import("./pages/HomePage/HomePage")),
+    component: lazy(() => import("./pages/Login/Login")),
     private: false,
     restricted: false,
   },

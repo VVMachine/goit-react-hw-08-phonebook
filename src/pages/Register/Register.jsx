@@ -26,7 +26,7 @@ class Register extends Component {
     const { name, email, password } = this.state;
 
     return (
-      <div>
+      <div className={styles.container}>
         <h3 className={styles.title}>Sign Up new user</h3>
         <form onSubmit={this.handleSubmit}>
         <div>
@@ -66,9 +66,11 @@ class Register extends Component {
           </label>
 
           </div>
+          <div className={styles.btnContainer}>
           <button type="submit" className={styles.button}>
             Register
           </button>
+          </div>
         </form>
       </div>
     );

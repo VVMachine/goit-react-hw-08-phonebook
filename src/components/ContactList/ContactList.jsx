@@ -11,7 +11,7 @@ import contactSelectors from "../../redux/contact/contactSelectors";
 
 function ContactList({ contactsList, onRemoveContact }) {
   return (
-    <>
+    <div className={styles.container}>
       <TransitionGroup component="ul" className={styles.list}>
         {contactsList.length > 0 &&
           contactsList.map(({ id, name, number }) => (
@@ -34,7 +34,7 @@ function ContactList({ contactsList, onRemoveContact }) {
             </CSSTransition>
           ))}
       </TransitionGroup>
-    </>
+    </div>
   );
 }
 
@@ -44,6 +44,7 @@ ContactList.defaultProps = {
     return;
   },
 };
+
 
 ContactList.propTypes = {
   contactsList: PropTypes.arrayOf(

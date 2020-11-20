@@ -4,6 +4,18 @@
     font-size: 20px;
     font-family: 'Lato', sans-serif;
     margin-bottom: 25px;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.linkContainter {
+    display: flex;
+    justify-content: center;
 }
 
 

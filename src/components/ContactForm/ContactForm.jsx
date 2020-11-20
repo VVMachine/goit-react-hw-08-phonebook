@@ -58,30 +58,38 @@ class ContactForm extends Component {
   render() {
     return (
       <form onSubmit={this.addButtonHandler}>
-        <div className={styles.input}>
-          <p className={styles.fieldName}>Name</p>
-          <input
-            className={styles.input}
-            type="text"
-            placeholder="Input name"
-            name="name"
-            onChange={this.inputHandler}
-            onClick={this.clearInput}
-          />
-          <p className={styles.fieldName}>Phone (XXX-XX-XX)</p>
-          <input
-            className={styles.input}
-            type="tel"
-            placeholder="Input number"
-            name="number"
-            pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
-            onChange={this.inputHandler}
-            onClick={this.clearInput}
-          />
+        <div className={styles.container}>
+          <div className={styles.input}>
+            <div>
+              <span className={styles.fieldName}>Name: </span>
+              <input
+                className={styles.input}
+                type="text"
+                placeholder="Name"
+                name="name"
+                onChange={this.inputHandler}
+                onClick={this.clearInput}
+              />
+            </div>
+            <div>
+              <span className={styles.fieldName}>Phone: </span>
+              <input
+                className={styles.input}
+                type="tel"
+                placeholder="Number (XXX-XX-XX)"
+                name="number"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                onChange={this.inputHandler}
+                onClick={this.clearInput}
+              />
+            </div>
+          </div>
+          <div className={styles.btnContainer}>
+            <button type="submit" className={styles.button}>
+              Add Contact
+            </button>
+          </div>
         </div>
-        <button type="submit" className={styles.button}>
-          Add Contact
-        </button>
       </form>
     );
   }

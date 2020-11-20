@@ -27,8 +27,9 @@ class Login extends Component {
     const {  email, password } = this.state;
 
     return (
-      <div>
+      <div className={styles.container}>
         <h3 className={styles.title}>Sign In</h3>
+        <div>
         <form onSubmit={this.handleSubmit}>
           <div>
           <label>
@@ -43,7 +44,7 @@ class Login extends Component {
             />
           </label>
           <label>
-            <p className={styles.fieldName}>Password:</p>
+            <p class={styles.fieldName}>Password:</p>
             <input
               className={styles.input}
               type="password"
@@ -54,10 +55,13 @@ class Login extends Component {
             />
           </label>
           </div>
+          <div className={styles.btnContainer}>
           <button type="submit" className={styles.button}>
             Login
           </button>
+          </div>
         </form>
+        </div>
       </div>
     );
   }

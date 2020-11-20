@@ -51,7 +51,7 @@ class Contacts extends Component {
 
     return (
       <>
-        <div className="App">
+        <div className={styles.container}>
           <CSSTransition
             in={didMount}
             timeout={500}
@@ -62,6 +62,8 @@ class Contacts extends Component {
           </CSSTransition>
 
           <ContactForm onOpenNotification={this.handleOpenNotification} />
+
+          <hr/>
 
           <h3 className={styles.contactList}>Contacts list</h3>
 

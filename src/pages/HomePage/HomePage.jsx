@@ -8,7 +8,7 @@ function HomePage() {
     <div className={styles.container}>
       <h1 className={styles.title}>PHONEBOOK HOMEPAGE</h1>
 
-
+    <div className={styles.linkContainter}>
       <span>
         <Link to="/login" exact className={styles.link}>
           Sign In
@@ -22,6 +22,7 @@ function HomePage() {
           Sign Up
         </Link>
       </span>
+      </div>
     </div>
   );
 }
