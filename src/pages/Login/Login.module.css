@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+.title {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 25px;
+}
+
+.fieldName {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+.input {
+    margin-top: 8px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #304a63;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-top: 15px;
+  }
+  
+  .button:hover {background-color: #3b6791}
+  
+  .button:active {
+    background-color: #3b6791;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+.title {
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
